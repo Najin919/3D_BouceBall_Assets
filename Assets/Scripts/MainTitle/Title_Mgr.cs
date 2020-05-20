@@ -20,9 +20,6 @@ public class Title_Mgr : MonoBehaviour
     public Image Option;
     public Button Option_Close;
 
-
-
-
     void Start()
     {
         if (Option_Btn != null)
@@ -46,7 +43,6 @@ public class Title_Mgr : MonoBehaviour
             });
         }
     }
-
 
     void Update()
     {
