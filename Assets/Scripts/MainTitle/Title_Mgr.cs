@@ -13,7 +13,7 @@ public class Title_Mgr : MonoBehaviour
 
     //씬 이동 버튼
     public Button m_Button;
-    private bool b_ButtonT = false;
+    public bool b_ButtonT = false;
 
     [Header("Option")]
     public Button Option_Btn;
@@ -51,7 +51,9 @@ public class Title_Mgr : MonoBehaviour
 
     void FadeOut()
     {
-        if (b_ButtonT == true)
+        //Ground m_BallT = GameObject.Find("m_BallT").GetComponent<Ground>();
+
+        if (b_ButtonT == true )
         {
             m_Fade.gameObject.SetActive(true);
 
