@@ -7,28 +7,29 @@ public class Ground : MonoBehaviour
 {
     public GameObject m_Ball;
 
-    private bool m_BallT = false;   //공과 바닥이 충돌
+    public bool m_BallT = false;   //공과 바닥이 충돌
     private float m_Speed = 15.0f;
 
-    Title_Mgr TouchScreen;
+    public GameObject Title_Mgr;
+    private Title_Mgr titlemgr;
 
     // Start is called before the first frame update
     void Start()
     {
-        //TouchScreen = GameObject.Find("b_ButtonT").GetComponent<Title_Mgr>();
+        titlemgr = Title_Mgr.GetComponent<Title_Mgr>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(m_BallT == true && GameObject.Find("Title_Mgr").GetComponent<Title_Mgr>().b_ButtonT == true)
+        if(m_BallT == true)
             m_Ball.transform.Translate(Vector3.up * m_Speed * Time.deltaTime);
     }
 
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject == m_Ball && TouchScreen == true)
+        if(collision.gameObject == m_Ball && titlemgr.m_ButtonT == true)
         {
             m_BallT = true;
         }

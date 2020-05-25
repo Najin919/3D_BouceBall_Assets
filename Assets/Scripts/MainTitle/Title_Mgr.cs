@@ -13,7 +13,10 @@ public class Title_Mgr : MonoBehaviour
 
     //씬 이동 버튼
     public Button m_Button;
-    public bool b_ButtonT = false;
+    public bool m_ButtonT = false;
+
+    public GameObject Ground;
+    private Ground ground;
 
     [Header("Option")]
     public Button Option_Btn;
@@ -39,9 +42,11 @@ public class Title_Mgr : MonoBehaviour
         {
             m_Button.onClick.AddListener(() =>
             {
-                b_ButtonT = true;
+                m_ButtonT = true;
             });
         }
+
+        ground = Ground.GetComponent<Ground>();
     }
 
     void Update()
@@ -51,9 +56,8 @@ public class Title_Mgr : MonoBehaviour
 
     void FadeOut()
     {
-        //Ground m_BallT = GameObject.Find("m_BallT").GetComponent<Ground>();
 
-        if (b_ButtonT == true )
+        if (ground.m_BallT == true )
         {
             m_Fade.gameObject.SetActive(true);
 
@@ -70,7 +74,7 @@ public class Title_Mgr : MonoBehaviour
                 m_Fadeout = 1.0f;
 
 
-                b_ButtonT = false;
+                m_ButtonT = false;
 
                 SceneManager.LoadScene("InGame");
             }

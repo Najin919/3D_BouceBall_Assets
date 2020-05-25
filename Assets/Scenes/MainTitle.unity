@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.31188765, g: 0.269202, b: 0.41202044, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -356,7 +356,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Fade: {fileID: 683168474}
   m_Button: {fileID: 59507570}
-  b_ButtonT: 0
+  m_ButtonT: 0
+  Ground: {fileID: 2025601139}
   Option_Btn: {fileID: 1947003963}
   Option: {fileID: 1962820565}
   Option_Close: {fileID: 1293984718}
@@ -2123,6 +2124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Ball: {fileID: 1600612829}
+  m_BallT: 0
+  Title_Mgr: {fileID: 92873326}
 --- !u!1 &2116917933
 GameObject:
   m_ObjectHideFlags: 0
