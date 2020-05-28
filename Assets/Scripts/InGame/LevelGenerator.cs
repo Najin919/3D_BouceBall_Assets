@@ -7,13 +7,17 @@ public class LevelGenerator : MonoBehaviour
     int[,] a_Map;
     public GameObject m_Map;
 
+    [Header("맵크기")]
+    public int Width_x = 0;
+    public int Width_z = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        for(int i=0; i<100; i++)
+        for(int x=0; x< Width_x; x++)
         {
-            for(int j=0; j<100; j++)
-            Instantiate(m_Map, new Vector3(transform.position.x *22* j, transform.position.y, transform.position.z* 1.5f * i), Quaternion.identity);
+            for(int z=0; z< Width_z; z++)
+            Instantiate(m_Map, new Vector3( x, transform.position.y, z), Quaternion.identity);
         }
     }
 

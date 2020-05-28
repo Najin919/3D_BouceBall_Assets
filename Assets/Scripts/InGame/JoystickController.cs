@@ -28,7 +28,7 @@ public class JoystickController : MonoBehaviour
 
     public GameObject smallStick;
     public GameObject bGStick;
-    Vector3 stickFirstPosition;
+    Vector3 JoystickFirstPosition;
     public Vector3 joyVec;
     float stickRadius;
 
@@ -40,32 +40,36 @@ public class JoystickController : MonoBehaviour
 
     public void PointDown()
     {
+        bGStick.gameObject.SetActive(true);
         bGStick.transform.position = Input.mousePosition;
         smallStick.transform.position = Input.mousePosition;
-        stickFirstPosition = Input.mousePosition;
+        JoystickFirstPosition = Input.mousePosition;
     }
 
     public void Drag(BaseEventData baseEventData)
     {
         PointerEventData pointerEventData = baseEventData as PointerEventData;
         Vector3 DragPosition = pointerEventData.position;
-        joyVec = (DragPosition - stickFirstPosition).normalized;
+        joyVec = (DragPosition - JoystickFirstPosition).normalized;
 
-        float stickDistance = Vector3.Distance(DragPosition, stickFirstPosition);
+        float stickDistance = Vector3.Distance(DragPosition, JoystickFirstPosition);
 
         if(stickDistance < stickRadius)
         {
-            smallStick.transform.position = stickFirstPosition + joyVec * stickDistance;
+            smallStick.transform.position = JoystickFirstPosition + joyVec * stickDistance;
         }
         else
         {
-            smallStick.transform.position = stickFirstPosition + joyVec * stickRadius;
+            smallStick.transform.position = JoystickFirstPosition + joyVec * stickRadius;
         }
     }
 
     public void Drop()
     {
+        bGStick.gameObject.SetActive(false);
         joyVec = Vector3.zero;
+        bGStick.transform.position = JoystickFirstPosition;
+        smallStick.transform.position = JoystickFirstPosition;
     }
 
     // Update is called once per frame

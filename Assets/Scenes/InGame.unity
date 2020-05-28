@@ -380,7 +380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &853722849
 RectTransform:
   m_ObjectHideFlags: 0
@@ -563,6 +563,21 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4411087716338894106, guid: ff62a0f6f1c75e747b4b7fade9d12220,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.055
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411087716338894106, guid: ff62a0f6f1c75e747b4b7fade9d12220,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411087716338894106, guid: ff62a0f6f1c75e747b4b7fade9d12220,
+        type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4411087716338894107, guid: ff62a0f6f1c75e747b4b7fade9d12220,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -571,7 +586,7 @@ PrefabInstance:
     - target: {fileID: 4411087716338894107, guid: ff62a0f6f1c75e747b4b7fade9d12220,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4411087716338894107, guid: ff62a0f6f1c75e747b4b7fade9d12220,
         type: 3}
@@ -755,7 +770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b382a8996fb49e4d8fe11b4d7dae7a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Movespeed: 500
 --- !u!1 &1527884510
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +957,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Map: {fileID: 4184062698517299600, guid: 91b4ac3e6c50df749a5041ccfd7944f8, type: 3}
+  Width_x: 20
+  Width_z: 20
 --- !u!4 &1753011241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4411087716338894107, guid: ff62a0f6f1c75e747b4b7fade9d12220,
