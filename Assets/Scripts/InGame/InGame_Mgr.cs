@@ -22,7 +22,6 @@ public class InGame_Mgr : MonoBehaviour
     {
         FadeIn();
     }
-
     void FadeIn()
     {
         m_InTtme += Time.deltaTime;
